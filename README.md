@@ -1,5 +1,6 @@
 # cc_test_module
-A concourse cicd pipline test module
+
+A concourse cicd pipline python test module.
 
 ## Pipeline
 - trigger on lib repo
