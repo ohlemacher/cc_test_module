@@ -12,16 +12,17 @@ fi
 
 function info {
     local msg="$1"
-    (>&2 echo Info: "$msg")  # Subshell avoids interactions with other redirections
+    (>&2 echo "\n=== Info: $msg")  # Subshell avoids interactions with other redirections
 }
 
 function die {
     local msg="$1"
-    (>&2 echo Fatal: "$msg")  # Subshell avoids interactions with other redirections
+    (>&2 echo "\n!!! Fatal: $msg")  # Subshell avoids interactions with other redirections
     exit 1
 }
 
 function install_prereqs {
+    info "Install prereqs"
     pip install pytest || die "pip install pytest failed"
 }
 
